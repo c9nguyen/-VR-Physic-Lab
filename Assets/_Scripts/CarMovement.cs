@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CarMovement : MonoBehaviour {
 
     public float xVelocity;
 
     public float yVelocity;
+
+    public Text reportText;
 
     public Vector3 xPosition;
 
@@ -26,8 +29,9 @@ public class CarMovement : MonoBehaviour {
     void FixedUpdate()
     {
         //       rb.velocity = new Vector3(velocity, rb.velocity.y, rb.velocity.z);
-     //   Debug.Log(rb.mass);
-      //  Debug.Log(rb.velocity);
+        //   Debug.Log(rb.mass);
+        //  Debug.Log(rb.velocity);
+        reportText.text = "Velocity: " + xVelocity;
     }
 
     void OnCollisionEnter(Collision other)
