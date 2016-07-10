@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{2CAF389A-08E5-7703-BE0F-133F8D8F6058}") = "Physics VR Lab", "Assembly-CSharp-firstpass.csproj", "{48C00B57-9BE4-1290-A5F9-01AA1449C95D}"
+EndProject
+Project("{2CAF389A-08E5-7703-BE0F-133F8D8F6058}") = "Physics VR Lab", "Assembly-CSharp.csproj", "{F60DB502-8E2D-4104-0024-95F363528D16}"
+EndProject
+Project("{2CAF389A-08E5-7703-BE0F-133F8D8F6058}") = "Physics VR Lab", "Assembly-CSharp-Editor.csproj", "{099EDACC-6BB8-1661-73C4-D466E3C36E21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48C00B57-9BE4-1290-A5F9-01AA1449C95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C00B57-9BE4-1290-A5F9-01AA1449C95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C00B57-9BE4-1290-A5F9-01AA1449C95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C00B57-9BE4-1290-A5F9-01AA1449C95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60DB502-8E2D-4104-0024-95F363528D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60DB502-8E2D-4104-0024-95F363528D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60DB502-8E2D-4104-0024-95F363528D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60DB502-8E2D-4104-0024-95F363528D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{099EDACC-6BB8-1661-73C4-D466E3C36E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{099EDACC-6BB8-1661-73C4-D466E3C36E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{099EDACC-6BB8-1661-73C4-D466E3C36E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{099EDACC-6BB8-1661-73C4-D466E3C36E21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
