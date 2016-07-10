@@ -136,6 +136,8 @@
      <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
      <Compile Include="Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" />
      <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
+     <Compile Include="Assets\_Scripts\Car1ControlListener.cs" />
+     <Compile Include="Assets\_Scripts\Car2ControlListener.cs" />
      <Compile Include="Assets\_Scripts\CarMovement.cs" />
      <Compile Include="Assets\_Scripts\ChangeValues.cs" />
      <Compile Include="Assets\_Scripts\CollisionListener.cs" />

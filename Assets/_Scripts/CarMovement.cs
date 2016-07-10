@@ -7,6 +7,8 @@ public class CarMovement : MonoBehaviour {
 
     public float yVelocity;
 
+	public float position;
+
     public Vector3 xPosition;
 
     public bool inelastic = true;
@@ -19,6 +21,7 @@ public class CarMovement : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+		position = rb.position.z;
     }
 
     //Update is called once per frame
@@ -29,6 +32,7 @@ public class CarMovement : MonoBehaviour {
      //   Debug.Log(rb.mass);
       //  Debug.Log(rb.velocity);
     }
+		
 
     void OnCollisionEnter(Collision other)
     {
@@ -82,19 +86,22 @@ public class CarMovement : MonoBehaviour {
 
     public void ChangeCarVelocity(float newValue)
     {
-        xVelocity = newValue;
+
+        xVelocity += newValue;
+		Debug.Log (xVelocity);
      
     }
 
     public void ChangeCarMass(float newValue)
     {
-        rb.mass = newValue;
+        rb.mass += newValue;
         //Debug.Log("Mass:" + rb.mass);
     }
 
     public void ChangeCarPosition(float newValue)
     {
-        rb.MovePosition(new Vector3(0, 0, newValue));
+		position += newValue;
+		rb.MovePosition(new Vector3(0, 0, position));
     }
 
     public void addVelocity()
