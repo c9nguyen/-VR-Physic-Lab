@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class SliderListener : MonoBehaviour {
 
     public GameObject car;
     public Slider slider;
-	public Text velocityText;
+//    public Text velocityText;
 	float velocityValue;
 
 
@@ -14,6 +15,7 @@ public class SliderListener : MonoBehaviour {
     // Use this for initialization
     void Start () {
         slider = GetComponent<Slider>();
+//		velocityText = this.gameObject.GetComponent<Text> ();
 
 
 	}
@@ -21,17 +23,20 @@ public class SliderListener : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI ()
     {
-        GUI.Label(new Rect(1, 1, 20, 20), "hi");
+       // GUI.Label(new Rect(1, 1, 20, 20), "hi");
 	
 	}
 
     public void ChangeCarVelocity()
-    {
+	{
 		
-        velocityValue = this.gameObject.GetComponent<Slider>().value;
-		car.GetComponent<CarMovement>().ChangeCarVelocity(velocityValue);
+		velocityValue = this.gameObject.GetComponent<Slider> ().value;
+		car.GetComponent<CarMovement> ().ChangeCarVelocity (velocityValue);
 
-    }
+//		//Change car velocity text value
+//		float value = Truncate(velocityValue, 2);
+//		velocityText.text = "Car 1 Velocity: " + velocityValue.ToString ();
+	}
 
     public void ChangeCarMass()
     {
@@ -45,16 +50,16 @@ public class SliderListener : MonoBehaviour {
         car.GetComponent<CarMovement>().ChangeCarPosition(value);
     } 
 
-	public void ChangeVelocityValue()
-	{
-		float value = velocityText.tag.Truncate (2);
-		velocityText.text = "Car 1 Velocity: " + velocityValue.ToString ();
-	}
+//	public void ChangeVelocityValue()
+//	{
+//		float value = Truncate(velocityValue, 2);
+//		//velocityText.text = "Car 1 Velocity: " + value.ToString ();
+//	}
 
-	public static float Truncate(this float value, int digits)
+	public static float Truncate(float value, int digits)
 	{
-		double mult = Mathf.Pow (10.0, digits);
-		double result = Mathf.Truncate (mult * value) / Mult;
+		double mult = Math.Pow (10.0, digits);
+		double result = Math.Truncate (mult * value) / mult;
 		return (float) result;
 	}
     
