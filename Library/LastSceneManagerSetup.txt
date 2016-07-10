@@ -1,5 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/0934Sliders correct starting position and reset button disables
-    again.unity
+- path: Assets/_Scenes/1610ProjectileMotion.unity
   isLoaded: 1
   isActive: 1
