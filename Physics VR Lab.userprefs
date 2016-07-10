@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\SliderListener.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\CollisionListener.cs">
     <Files>
+      <File FileName="Assets\_Scripts\SliderListener.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\CollisionListener.cs" Line="40" Column="59" />
-      <File FileName="Assets\_Scripts\SliderListener.cs" Line="13" Column="2" />
-      <File FileName="Assets\_Scripts\CarMovement.cs" Line="33" Column="43" />
-      <File FileName="Assets\_Scripts\ResetButtonListener.cs" Line="26" Column="46" />
-      <File FileName="Assets\_Scripts\StartButtonListener.cs" Line="24" Column="47" />
+      <File FileName="Assets\_Scripts\CarMovement.cs" Line="58" Column="63" />
+      <File FileName="Assets\_Scripts\ResetButtonListener.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\StartButtonListener.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

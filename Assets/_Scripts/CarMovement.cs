@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 
 public class CarMovement : MonoBehaviour {
 
@@ -8,7 +7,7 @@ public class CarMovement : MonoBehaviour {
 
     public float yVelocity;
 
-    public Text reportText;
+	public float position;
 
     public Vector3 xPosition;
 
@@ -22,6 +21,7 @@ public class CarMovement : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+		position = rb.position.z;
     }
 
     //Update is called once per frame
@@ -29,10 +29,10 @@ public class CarMovement : MonoBehaviour {
     void FixedUpdate()
     {
         //       rb.velocity = new Vector3(velocity, rb.velocity.y, rb.velocity.z);
-        //   Debug.Log(rb.mass);
-        //  Debug.Log(rb.velocity);
-        reportText.text = "Velocity: " + xVelocity;
+     //   Debug.Log(rb.mass);
+      //  Debug.Log(rb.velocity);
     }
+		
 
     void OnCollisionEnter(Collision other)
     {
@@ -86,19 +86,22 @@ public class CarMovement : MonoBehaviour {
 
     public void ChangeCarVelocity(float newValue)
     {
-        xVelocity = newValue;
+
+        xVelocity += newValue;
+		Debug.Log (xVelocity);
      
     }
 
     public void ChangeCarMass(float newValue)
     {
-        rb.mass = newValue;
+        rb.mass += newValue;
         //Debug.Log("Mass:" + rb.mass);
     }
 
     public void ChangeCarPosition(float newValue)
     {
-        rb.MovePosition(new Vector3(0, 0, newValue));
+		position += newValue;
+		rb.MovePosition(new Vector3(0, 0, position));
     }
 
     public void addVelocity()
