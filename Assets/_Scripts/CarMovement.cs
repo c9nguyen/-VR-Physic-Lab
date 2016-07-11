@@ -12,16 +12,20 @@ public class CarMovement : MonoBehaviour {
     public Vector3 xPosition;
 
     public bool inelastic = true;
+    public AudioClip crashSound;
 
     private Rigidbody rb;
     private bool changed = false;
     private float oldVelocity;
 
+    private AudioSource audioSource;
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 		position = rb.position.z;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     //Update is called once per frame
@@ -41,6 +45,7 @@ public class CarMovement : MonoBehaviour {
         if (inelastic)
         {
             rb.AddForce(0, 0, xVelocity, ForceMode.VelocityChange);
+            PlayCrashSound(other);
         }
         else
         {
@@ -74,9 +79,18 @@ public class CarMovement : MonoBehaviour {
                 //Debug.Log("VelocityF:" + xVelocity);
                 addVelocity();
                 changed = true;
+
+                PlayCrashSound(other);
             }
 
         }
+    }
+
+    void PlayCrashSound(Collision collision)
+    {
+        float volumeScale = collision.relativeVelocity.magnitude * .8f;
+        audioSource.loop = false;
+        audioSource.PlayOneShot(crashSound, volumeScale);
     }
 
     void OnCollisionExit(Collision other)

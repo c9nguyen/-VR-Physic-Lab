@@ -61,5 +61,7 @@ public class ResetButtonListener : MonoBehaviour
         // Disables the reset button
         resetButton.interactable = false;
 
+        // Stop background music
+        startButtton.GetComponent<AudioSource>().Stop();
     }
 }

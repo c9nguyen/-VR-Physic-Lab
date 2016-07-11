@@ -31,8 +31,9 @@ public class StartButtonListener : MonoBehaviour {
     private Vector3 car1OriginalPosition;
     private Vector3 car2OriginalPosition;
 
+    private AudioSource bacngroundAudioSource;
 
-//	public Button car1Decrease
+    //	public Button car1Decrease
     // Use this for initialization
     void Start ()
     {
@@ -41,6 +42,7 @@ public class StartButtonListener : MonoBehaviour {
         //car1OriginalPosition = car1.transform.position;
         //car2OriginalPosition = car2.transform.position;
 
+        bacngroundAudioSource = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -50,6 +52,8 @@ public class StartButtonListener : MonoBehaviour {
 
     public void startMovement()
     {
+        bacngroundAudioSource.Play();
+
         //car1OriginalPosition = car1.transform.position;
         //car2OriginalPosition = car2.transform.position;
         car1.xPosition = car1.transform.position;
